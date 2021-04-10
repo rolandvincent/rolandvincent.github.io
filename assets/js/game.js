@@ -109,6 +109,7 @@ window.onkeydown = (event) => {
     if (event.keyCode == 39){
         var collider = colliderXCheck(view.left + player.width, player.y, player.height);
         if (collider){
+            player.condition = PLAYER_IDLE;
             return;
         }
         if (view.left + c.width + view.xspeed > map.width){
