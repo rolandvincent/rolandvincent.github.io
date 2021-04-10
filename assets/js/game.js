@@ -107,7 +107,7 @@ function loaded(){
 
 window.onkeydown = (event) => {
     if (event.keyCode == 39){
-        if (view.left + c.width + view.xspeed > map.width){
+        if (view.left + c.width + view.xspeed > map.width && colliderCheck(view.left + player.width, player.y){
             view.left = map.width - c.width;
         }else{
             view.left += view.xspeed;
@@ -131,6 +131,15 @@ window.onkeyup = (event) => {
 
 window.onload = (event) => {
     draw();
+}
+
+function colliderXCheck(x, y, height){
+    for (var yy = y; yy < y + Math.ceil(height/block.height); yy++){
+        if (MapBlocks[x/block.width][yy/block.height] != undefined){
+            return true;
+        }
+    }
+    return false;
 }
 
 function draw(){
