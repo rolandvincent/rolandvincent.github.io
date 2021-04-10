@@ -314,9 +314,8 @@ function flipY(image){
      var ctx = c.getContext('2d');
      ctx.scale(-1,1);
      ctx.drawImage(image,-image.width,0);
-     var imgg = new Image();
-     imgg.src = c.toDataURL();
-     return imgg;
+    
+     return c.toDataURL();
 }
 
 
