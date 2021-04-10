@@ -107,7 +107,7 @@ function loaded(){
 
 window.onkeydown = (event) => {
     if (event.keyCode == 39){
-        if (view.left + c.width + view.xspeed > map.width && colliderCheck(view.left + player.width, player.y){
+        if (view.left + c.width + view.xspeed > map.width && !colliderCheck(view.left + player.width, player.y)){
             view.left = map.width - c.width;
         }else{
             view.left += view.xspeed;
