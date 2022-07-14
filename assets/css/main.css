@@ -1,0 +1,291 @@
+:root {
+    --primary-foreground-color: #ffffff;
+    --primary-background-color: #000000;
+    --secondary-foreground-color: #000000;
+    --secondary-background-color: #ffffff;
+    --primary-gradient-start: #ffcdb2;
+    --primary-gradient-end: #e5989b;
+}
+
+.navbar>.container-fluid {
+    justify-content: center;
+    text-align: center;
+}
+
+.header {
+    position: relative;
+    display: block;
+}
+
+.main {
+    display: block;
+    color: aliceblue;
+}
+
+.img-center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.img-right {
+    display: block;
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.img-md {
+    width: 150px;
+    height: 150px;
+}
+
+.img-sm {
+    width: 100px;
+    height: 100px;
+}
+
+.item-center {
+    align-self: center;
+}
+
+.w-m2 {
+    max-width: 200px;
+}
+
+.rounded-full {
+    border-radius: 100%;
+}
+
+.txt-md {
+    font-size: medium;
+}
+
+.txt-lg {
+    font-size: large;
+}
+
+.badge {
+    background: -webkit-linear-gradient(45deg, var(--primary-gradient-start), var(--primary-gradient-end));
+}
+
+.badge.line::after {
+    content: '';
+    position: fixed;
+    display: inline;
+    left: 0;
+    border-radius: 5px;
+    width: 100%;
+    height: 5px;
+    background: -webkit-linear-gradient(45deg, var(--primary-gradient-start), var(--primary-gradient-end));
+    z-index: -1;
+    transform: translateY(120%);
+
+}
+
+.block {
+    display: block;
+}
+
+.container.center {
+    margin-left: unset;
+    margin-right: unset;
+}
+
+.title {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 24px;
+}
+
+.txt-grad {
+    background: -webkit-linear-gradient(45deg, var(--primary-gradient-start), var(--primary-gradient-end));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.sub-title {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+    color: darkgrey;
+}
+
+.list-icons svg {
+    cursor: pointer;
+    height: 30px;
+    margin-left: 5px;
+    margin-right: 5px;
+    color: var(--bs-dark);
+}
+
+.list-icons {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+    padding: 5px;
+    border-radius: 5px;
+    background-image: -webkit-linear-gradient(45deg, var(--primary-gradient-start), var(--primary-gradient-end));
+}
+
+a .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    border: 1px solid var(--bs-dark);
+    transform: translate(-36%, 8px);
+    background-color: var(--secondary-background-color);
+    color: var(--bs-dark);
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+}
+
+a .tooltiptext:after {
+    display: inline-block;
+    top: -1px;
+    left: 40%;
+    width: 30px;
+    height: 30px;
+    background-color: var(--secondary-background-color);
+    content: '';
+    transform: rotate(45deg);
+
+
+    /* Position the tooltip text - see examples below! */
+    position: fixed;
+    z-index: -1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+a:hover .tooltiptext {
+    visibility: visible;
+}
+
+main {
+    margin-bottom: 100px;
+}
+
+.card {
+    flex-wrap: wrap;
+    border: 3px solid transparent;
+    margin: 5px 5px 5px 5px;
+    background-color: gainsboro;
+    border-radius: 10px;
+    transition: 0.2s;
+}
+
+.card.mini {
+    width: 100px;
+}
+
+.card.wide {
+    width: 100%;
+    height: 300px;
+}
+
+.card.modern {
+    background-color: var(--secondary-background-color);
+}
+
+@media screen and (min-width: 800px) {
+    .card.modern {
+        width: calc(50% - 10px);
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .card.modern {
+        width: calc(100% - 10px);
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+}
+
+.card.mini img {
+    width: 100px;
+    align-self: center;
+    margin-top: 10px;
+}
+
+.card.mini:hover {
+    width: 100px;
+    border: 3px solid green;
+    transition: 0.2s;
+}
+
+.card.wide img {
+    width: 100%;
+    height: 170px;
+    object-fit: contain;
+}
+
+.card-body{
+    padding-top: 5px;
+    max-height: 5rem;
+    overflow: hidden;
+}
+
+.card-body>p {
+    font-size: 14px;
+}
+
+.card-option{
+    position: fixed;
+    bottom: 10px;
+    left: 1rem;
+    top: auto;
+}
+
+.bottom-right{
+    position: fixed;
+    display: inline-block;
+    left: auto;
+    margin-top: 5px;
+    right: 1rem;
+    color: var(--bs-dark);
+}
+
+.ratings>.checked {
+    color: orange;
+}
+
+.ratings>svg {
+    color: var(--bs-dark);
+}
+
+.btn-none {
+    background-color: transparent;
+    border-width: 0px;
+    border-radius: 0px;
+    color: var(--primary-foreground-color);
+}
+
+.btn-modern {
+    background-color: transparent;
+    border: 0;
+    border-radius: 5px;
+    outline: none;
+    width: 30px;
+    height: 30px;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+
+.btn-modern svg{
+    align-self: center;
+    color: var(--bs-dark);
+    height: 25px;
+    width: 25px;
+    transition: 0.2s;
+}
+
+.btn-modern:hover svg{
+    color: red;
+    transform: scale(110%);
+    transition: 0.2s;
+}
