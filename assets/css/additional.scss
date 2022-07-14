@@ -1,0 +1,10 @@
+
+a .tooltiptext {
+    [data-aos] {
+        pointer-events: none;
+    
+        &.aos-animate {
+            pointer-events: auto;
+        }
+    }
+}
